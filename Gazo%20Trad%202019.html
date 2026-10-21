@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="am">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#124e45"><title>Gazo Merchant Inspection</title>
+<style>
+:root{--green:#124e45;--mint:#e8f4ef;--ink:#172b27;--muted:#667873;--line:#dce7e2;--red:#b42318;--gold:#946200}*{box-sizing:border-box}body{margin:0;background:#f3f7f5;color:var(--ink);font-family:Arial,'Noto Sans Ethiopic',sans-serif}header{background:var(--green);color:white;padding:18px 16px 16px;position:sticky;top:0;z-index:2;box-shadow:0 2px 8px #0002}header h1{font-size:20px;margin:0 0 5px}header p{font-size:13px;margin:0;opacity:.88}.wrap{max-width:760px;margin:auto;padding:14px}.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:13px}.nav button{padding:11px 5px;border:1px solid var(--line);background:white;border-radius:10px;color:var(--green);font-weight:700}.nav button.active{background:var(--green);color:white}.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:15px;margin-bottom:13px;box-shadow:0 2px 6px #10251c08}.panel h2{font-size:17px;margin:0 0 13px}.field{margin:10px 0}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #cbd9d3;border-radius:9px;font:inherit;background:white}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.btn{border:0;border-radius:10px;padding:12px 14px;font-weight:700;font-size:14px;cursor:pointer}.primary{background:var(--green);color:white}.secondary{background:var(--mint);color:var(--green)}.danger{background:#fff0ef;color:var(--red)}.muted{color:var(--muted);font-size:13px;line-height:1.5}.hidden{display:none!important}.searchrow{display:flex;gap:8px}.searchrow input{flex:1;min-width:0}.merchant{border:1px solid var(--line);padding:12px;border-radius:10px;margin:8px 0}.merchant strong{display:block;margin-bottom:4px}.badge{display:inline-block;border-radius:20px;padding:4px 8px;background:var(--mint);font-size:12px;color:var(--green)}.check{border:1px solid var(--line);padding:12px;border-radius:10px;margin:9px 0}.check p{font-size:14px;line-height:1.45;margin:0 0 10px}.choices{display:flex;gap:8px}.choices label{flex:1;text-align:center;border:1px solid var(--line);border-radius:9px;padding:9px;font-size:13px}.choices input{margin-right:5px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:var(--mint);border-radius:10px;padding:12px;text-align:center}.stat b{display:block;font-size:22px;color:var(--green)}.stat span{font-size:12px}.rowbtn{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.small{font-size:12px}.empty{text-align:center;color:var(--muted);padding:20px}.notice{background:#fff8e5;border:1px solid #f2d58c;color:#6c4d00;padding:11px;border-radius:10px;font-size:13px;line-height:1.5;margin-bottom:12px}footer{text-align:center;color:var(--muted);font-size:12px;padding:12px}@media(max-width:420px){.grid{grid-template-columns:1fr}.nav button{font-size:12px}.stats span{font-size:11px}}
+</style></head><body>
+<header><h1>የጋዞ ወረዳ የንግድ ቁጥጥር</h1><p>Gazo Merchant Inspection • ለወረዳዎች የሚጠቅም የዲጂታል ቁጥጥር መሣሪያ</p></header>
+<div class="wrap">
+<div class="notice"><b>መረጃ የሚቀመጥበት:</b> አሁን መረጃዎ በዚህ ስልክ ላይ በሚጠቀሙበት አሳሽ ውስጥ ይቀመጣል። “ነጋዴዎች” ትር ላይ የተመዘገቡ ነጋዴዎችን፣ “ሪፖርት” ትር ላይ የቁጥጥር ውጤቶችን ያያሉ። መረጃዎን ለማስቀመጥ ከታች “ምትኬ አውጣ” ይጫኑ። ምትኬው የነጋዴዎችንና የቁጥጥር ውጤቶችን ሁሉ ይይዛል። መረጃ ከጠፋ ደግሞ “ምትኬ መልስ” በመጠቀም መልሰው ይጫኑ። <b>አሁን ከተለያዩ ስልኮች በኦንላይን የሚጋራ አይደለም</b>፤ ይህ ለዚያ የደመና ዳታቤዝ ግንኙነት ይፈልጋል።</div>
+<div class="panel"><b>ለሁሉም ወረዳዎች የሚጠቅም የቁጥጥር ቅጽ</b><p class="muted">ይህ የድረ ገጽ ስሪት የነጋዴ መረጃ አልያዘም። እያንዳንዱ ወረዳ የራሱን መረጃ ማስገባት ይችላል፤ መረጃው በሚጠቀሙበት ስልክ/አሳሽ ውስጥ ይቀመጣል። የመንግሥት ስርዓት ጋር በቀጥታ የመረጃ ማመሳሰል አልተገናኘም።</p></div><div class="panel" id="backupPanel"><h2>የመረጃ ምትኬ</h2><p class="muted">ለማንበብና ለአመራር ለማሳየት የነጋዴዎችን መረጃ በተራ ቁጥር የሚያወጣ TXT ፋይል ይጠቀሙ። መረጃውን ወደ አፑ መልሶ ለመጫን ደግሞ JSON ምትኬ ያስቀምጡ።</p><button class="btn primary" id="backup" style="width:100%;font-size:17px">⬇ ምትኬ አውጣ (TXT — በቁጥር የተደረደረ)</button><button class="btn secondary" id="jsonBackup" style="width:100%;margin-top:8px">JSON ምትኬ አውጣ (መልሶ ለመጫን)</button><div class="field"><label>JSON ምትኬን መልሶ ለመጫን ፋይሉን ይምረጡ</label><input type="file" id="restoreFile" accept=".json,application/json"><button class="btn secondary" id="restoreBtn" style="margin-top:8px;width:100%">JSON ምትኬ መልስ</button></div></div><div class="nav"><button class="active" data-tab="inspect">አዲስ ቁጥጥር</button><button data-tab="merchants">ነጋዴዎች</button><button data-tab="reports">ሪፖርት</button></div>
+<section id="inspect">
+<div class="panel"><h2>1. ነጋዴውን ምረጥ / ፈልግ</h2><div class="searchrow"><input id="findMerchant" placeholder="ስም ወይም TIN ፈልግ"><button class="btn secondary" id="searchBtn">ፈልግ</button></div><div id="searchResults"></div><p class="muted">ነጋዴው ካልተመዘገበ፣ ከታች “አዲስ ነጋዴ” በመጫን መጀመሪያ ይመዝግቡት።</p></div>
+<div class="panel"><h2>2. የነጋዴ መረጃ</h2><input type="hidden" id="merchantId"><div class="field"><label>የነጋዴ/ድርጅት ስም *</label><input id="name" placeholder="ሙሉ ስም" required></div><div class="field"><label>TIN</label><input id="tin" inputmode="numeric" placeholder="የግብር ከፋይ ቁጥር"></div><div class="grid"><div class="field"><label>የንግድ ዘርፍ</label><input id="sector" placeholder="ሱቅ፣ እህል... "></div><div class="field"><label>ስልክ</label><input id="phone" inputmode="tel" placeholder="ስልክ ቁጥር"></div></div><div class="field"><label>የነጋዴ ምደባ</label><select id="classification"><option value="">-- ምደባ ይምረጡ --</option><option value="classified">የተፈረጀ</option><option value="unclassified">ያልተፈረጀ</option></select></div><div class="field"><label>ቀበሌ ይምረጡ</label><select id="kebele"><option value="">-- ቀበሌ ይምረጡ --</option><option value="01ከነማ">01 ከነማ</option><option value="01">01 ቀበሌ</option><option value="02">02 ቀበሌ</option><option value="03">03 ቀበሌ</option><option value="04">04 ቀበሌ</option><option value="05">05 ቀበሌ</option><option value="06">06 ቀበሌ</option><option value="07">07 ቀበሌ</option><option value="08">08 ቀበሌ</option><option value="09">09 ቀበሌ</option><option value="010">010 ቀበሌ</option><option value="011">011 ቀበሌ</option><option value="012">012 ቀበሌ</option><option value="013">013 ቀበሌ</option><option value="014">014 ቀበሌ</option><option value="015">015 ቀበሌ</option><option value="016">016 ቀበሌ</option><option value="017">017 ቀበሌ</option></select></div><div class="field"><button type="button" class="btn secondary" id="onlineRenewalCheck" style="width:100%">🌐 በኦፊሴላዊው የንግድ ፈቃድ ማጣሪያ አረጋግጥ</button><p class="muted">ይህ ቁልፍ የመንግሥት eTrade ማጣሪያን ይከፍታል። ውጤቱን ካየህ በኋላ ከታች ያለውን ሁኔታ በተረጋገጠው መሠረት ምረጥ።</p></div><div class="field"><label>የንግድ ፈቃድ እድሳት ሁኔታ</label><select id="renewal"><option value="">-- ሁኔታ ምረጥ --</option><option value="renewed">ታድሷል</option><option value="not_renewed">አልታደሰም</option><option value="new">አዲስ</option></select></div><div class="rowbtn"><button class="btn primary" id="saveMerchant">ነጋዴውን አስቀምጥ</button><button class="btn secondary" id="newMerchant">አዲስ ነጋዴ</button></div></div>
+<div class="panel"><h2>3. የቁጥጥር ዝርዝር — 6 መስፈርቶች</h2><div class="field"><label>የሩብ ዓመት ቁጥጥር</label><select id="quarter"><option value="">-- ሩብ ዓመት ምረጥ --</option><option value="1">1ኛ ሩብ ዓመት</option><option value="2">2ኛ ሩብ ዓመት</option><option value="3">3ኛ ሩብ ዓመት</option><option value="4">4ኛ ሩብ ዓመት</option></select></div><div class="field"><label>የጉብኝት ቀን</label><input type="date" id="visitDate"></div><div id="checklist"></div><div class="field"><label>ማስታወሻ / የሚወሰድ እርምጃ</label><textarea id="notes" rows="3" placeholder="ያልተሟላው መስፈርት፣ የተሰጠ ምክር፣ የክትትል ቀን..."></textarea></div><div class="field"><label>የተቆጣጣሪ / ባለሙያ ስም ይምረጡ</label><select id="inspectorName" onchange="toggleOtherInspector()"><option value="">-- ተቆጣጣሪ ይምረጡ --</option><option value="ሌላ">ሌላ ባለሞያ / የተቆጣጣሪ ስም ያስገቡ</option></select><input id="otherInspectorName" type="text" placeholder="የሌላውን ባለሙያ ስም ያስገቡ" style="display:none;margin-top:8px"></div><button class="btn primary" id="saveInspection" style="width:100%">የቁጥጥር ውጤት አስቀምጥ</button><p class="muted">ማስታወሻ፦ የስድስቱ መስፈርቶች ሁሉ ሳይመረጡ ውጤቱ አይቀመጥም።</p></div>
+</section>
+<section id="merchants" class="hidden"><div class="panel"><h2>የተመዘገቡ ነጋዴዎች (<span id="merchantCount">0</span>)</h2><div class="searchrow"><input id="merchantFilter" placeholder="በስም/TIN ፈልግ"><button class="btn secondary" id="filterBtn">ፈልግ</button></div><div id="merchantList"></div></div></section>
+<section id="reports" class="hidden"><div class="panel"><h2>የቁጥጥር ሪፖርት</h2><div class="stats"><div class="stat"><b id="totalM">0</b><span>ጠቅላላ ነጋዴዎች</span></div><div class="stat"><b id="totalI">0</b><span id="reportInspectionLabel">በተመረጠው ዓመት ቁጥጥሮች</span></div><div class="stat"><b id="failedI">0</b><span>ችግር የተገኘባቸው</span></div></div><div class="panel" style="margin-top:12px;background:#f8fbf9"><h3>የማጠቃለያ ሪፖርት</h3><p class="muted">ይህ ማጠቃለያ በላይ በተመረጠው ዓመት መሠረት ከተቀመጡ የቁጥጥር መዝገቦች በራሱ ይሰላል።</p><div id="summaryReportPreview"></div><button class="btn primary" id="summaryReportBtn" style="width:100%;margin-top:10px">⬇ ማጠቃለያ ሪፖርት አውጣ (TXT)</button></div><div class="panel" style="margin-top:14px;background:#f8fbf9"><h2>የሩብ ዓመት ሪፖርት ፋይል</h2><p class="muted">ለአመራር/ለሚመለከተው አካል ለማሳየት፣ ቁጥጥሮችን በ1ኛ፣ 2ኛ፣ 3ኛ ወይም 4ኛ ሩብ ዓመት በተራ ቁጥር ያወጣል።</p><div class="field"><label>የሪፖርት ዓመት (2019 ዓ.ም. ጀምሮ፤ ወደፊት በየዓመቱ ይጨመራል)</label><select id="reportYear"></select></div><div class="field"><label>ሪፖርት የሚወጣበት ሩብ ዓመት</label><select id="reportQuarter"><option value="1">1ኛ ሩብ ዓመት</option><option value="2">2ኛ ሩብ ዓመት</option><option value="3">3ኛ ሩብ ዓመት</option><option value="4">4ኛ ሩብ ዓመት</option></select></div><button class="btn primary" id="quarterReportBtn" style="width:100%">⬇ የሩብ ዓመት ሪፖርት በTXT ፋይል አውጣ</button><p class="muted">ፋይሉ የአራቱን ሩብ ዓመቶች የቁጥጥር ብዛት ማጠቃለያ እና የመረጡትን ሩብ ዓመት ዝርዝር ይይዛል።</p><button class="btn secondary" id="annualMerchantReportBtn" style="width:100%;margin-top:8px">⬇ የነጋዴ የ4ቱ ሩብ ዓመት ክትትል ሪፖርት አውጣ (TXT)</button><div class="panel" style="margin-top:12px"><h3>የእያንዳንዱ ነጋዴ የ4ቱ ሩብ ዓመት ሁኔታ</h3><p class="muted">አንድ ነጋዴ በስሙ አንድ ጊዜ ይታያል፤ ከስሙ በታች 1ኛ፣ 2ኛ፣ 3ኛ እና 4ኛ ሩብ ዓመት በተለያየ ሁኔታ ይታያሉ።</p><div class="field"><label>የሪፖርት ዓመት</label><select id="merchantQuarterYear"><option value="all">ሁሉም ዓመታት</option></select></div><div id="merchantQuarterOverview"></div></div><p class="muted">ይህ ሪፖርት እያንዳንዱ ነጋዴ በ1ኛ፣ 2ኛ፣ 3ኛ እና 4ኛ ሩብ ዓመት መቆጣጠሩን፣ ቀኑንና የተሟሉ/ያልተሟሉ መስፈርቶችን በቅደም ተከተል ያሳያል።</p></div></div></section>
+<footer>Gazo Merchant Inspection • የመረጃ ደህንነት፦ መረጃው በአካባቢያዊ አሳሽ ውስጥ ይቀመጣል፤ በየጊዜው ምትኬ ያውጡ</footer>
+</div>
+<script>
+const criteria=[
+'ነጋዴው የንግድ ፈቃድ አለው/አላት? በተመዘገበበት አድራሻ እየሠራ ነው?',
+'የጥራት ደረጃን የማያሟሉ ምርቶችን ከማምረት/ከማቅረብ አንጻር መስፈርቱን ያሟላል?',
+'ትክክለኛነቱ የተረጋገጠ የመለኪያ መሣሪያ ይጠቀማል?',
+'በተገለጸው የመሸጫ ዋጋ ይገበያያል እና ደረሰኝ ይሰጣል?',
+'ምርቶችን በመደበቅ ሳይሆን ለገበያ በቀጣይነት ያቀርባል?',
+'ምርቶችን በዓይነት ለይቶ ለደንበኞች ያቀርባል?'];
+const $=id=>document.getElementById(id);
+function ethiopianYear(value){
+ let d; if(value instanceof Date)d=value; else {const raw=String(value||'').trim();d=/^\d{4}-\d{2}-\d{2}$/.test(raw)?new Date(raw+'T12:00:00'):new Date(raw)}
+ if(Number.isNaN(d.getTime()))return '';
+ try{const parts=new Intl.DateTimeFormat('en-US-u-ca-ethiopic-nu-latn',{year:'numeric'}).formatToParts(d);const y=parts.find(p=>p.type==='year');return y?String(Number(y.value)):''}catch(e){return String(d.getFullYear())}
+}
+function ethiopianDate(value){
+ if(!value) return 'ቀን የለም';
+ let d;
+ if(value instanceof Date) d=value;
+ else { const raw=String(value); d=/^\d{4}-\d{2}-\d{2}$/.test(raw)?new Date(raw+'T12:00:00'):new Date(raw); }
+ if(Number.isNaN(d.getTime())) return String(value);
+ try { return new Intl.DateTimeFormat('am-ET-u-ca-ethiopic-nu-latn',{day:'numeric',month:'long',year:'numeric'}).format(d)+' ዓ.ም.'; }
+ catch(e){ return new Intl.DateTimeFormat('am-ET',{day:'numeric',month:'long',year:'numeric'}).format(d); }
+}
+const IMPORTED_MERCHANTS=[];
+let merchants=load('gazo_merchants',null);
+// Public-safe release: merchant names, TINs, and phone numbers are not bundled in this file.
+if(!Array.isArray(merchants)) merchants=[];
+function normKey(v){return String(v||'').toLowerCase().replace(/[\s\-\/]+/g,'').trim()}
+function merchantKey(m){const tin=normKey(m.tin); if(tin) return 'tin:'+tin; const name=normKey(m.name); return name ? 'name:'+name : ''}
+const knownKeys=new Set(merchants.map(merchantKey).filter(Boolean));
+let addedImported=0;
+for(const src of IMPORTED_MERCHANTS){
+  const key=merchantKey(src);
+  if(key && knownKeys.has(key)){
+    const existing=merchants.find(m=>merchantKey(m)===key);
+    if(existing){ for(const field of ['name','tin','sector','kebele','phone','renewal','address']) if((!existing[field] || String(existing[field]).trim()==='') && src[field]) existing[field]=src[field]; }
+    continue;
+  }
+  merchants.push({...src}); if(key) knownKeys.add(key); addedImported++;
+}
+localStorage.setItem('gazo_merchants',JSON.stringify(merchants));
+localStorage.setItem('gazo_734_import_v2','yes');
+let inspections=load('gazo_inspections',[]), selectedId='';
+function load(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}}function persist(){localStorage.setItem('gazo_merchants',JSON.stringify(merchants));localStorage.setItem('gazo_inspections',JSON.stringify(inspections))}function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderChecks(){ $('checklist').innerHTML=criteria.map((c,i)=>`<div class="check"><p><b>${i+1}.</b> ${esc(c)}</p><div class="choices"><label><input type="radio" name="c${i}" value="yes"> አሟልቷል</label><label><input type="radio" name="c${i}" value="no"> አላሟላም</label></div></div>`).join('')}
+function clearMerchant(){['merchantId','name','tin','sector','phone','kebele','renewal','classification'].forEach(x=>$(x).value='');selectedId=''}
+function fillMerchant(m){$('merchantId').value=m.id;selectedId=m.id;['name','tin','sector','phone','renewal','classification'].forEach(x=>$(x).value=m[x]||'');const ks=$('kebele');const kv=m.kebele||'';if(kv&&!Array.from(ks.options).some(o=>o.value===kv)){const op=document.createElement('option');op.value=kv;op.textContent=kv+' (ቀድሞ የተመዘገበ)';ks.appendChild(op)}ks.value=kv;window.scrollTo({top:0,behavior:'smooth'})}
+function saveMerchant(){let name=$('name').value.trim();if(!name){alert('እባክዎ የነጋዴውን ስም ያስገቡ።');return null}let id=$('merchantId').value||uid();let m={id,name,tin:$('tin').value.trim(),sector:$('sector').value.trim(),phone:$('phone').value.trim(),kebele:$('kebele').value.trim(),renewal:$('renewal').value,classification:$('classification').value,updated:new Date().toISOString()};let ix=merchants.findIndex(x=>x.id===id);if(ix>=0)merchants[ix]=m;else merchants.push(m);$('merchantId').value=id;selectedId=id;persist();renderAll();return m}
+// Open the official Ethiopian eTrade license checker. A standalone HTML app cannot read the
+// government's result directly unless eTrade provides an authorized API (browser same-origin policy).
+$('onlineRenewalCheck').addEventListener('click',()=>{
+  const tin=$('tin').value.trim();
+  if(!tin){alert('እባክዎ በTIN መስኩ የነጋዴውን TIN ያስገቡ።');$('tin').focus();return;}
+  const url='https://etrade.gov.et/business-license-checker?tin='+encodeURIComponent(tin);
+  const tab=window.open(url,'_blank','noopener');
+  if(!tab){alert('የኦፊሴላዊ ገጹ መክፈቻ ታግዷል። የአሳሹ pop-up ፈቃድ ይፍቀዱ።');return;}
+  alert('የመንግሥት eTrade ኦፊሴላዊ ማጣሪያ ተከፍቷል። በዚያ ገጽ የፈቃዱን ሁኔታ ያረጋግጡ፤ ከዚያ ወደዚህ አፕ ተመልሰው “ታድሷል/አልታደሰም” ይምረጡ። ውጤቱ በራሱ አይነበብም።');
+});
+function deleteMerchant(id){
+ const m=merchants.find(x=>x.id===id);
+ if(!m)return;
+ if(!confirm('“'+m.name+'” የሚባለውን ነጋዴ ከነጋዴ ዝርዝር ማጥፋት ይፈልጋሉ? የቀድሞ ቁጥጥር ታሪኮች ግን በሪፖርት ውስጥ ይቀራሉ።'))return;
+ merchants=merchants.filter(x=>x.id!==id);
+ if(selectedId===id)clearMerchant();
+ persist();renderAll();
+ alert('ነጋዴው ከዝርዝሩ ተሰርዟል። የቀድሞ ቁጥጥር ታሪኮች ተጠብቀዋል።');
+}
+function chooseMerchant(id){let m=merchants.find(x=>x.id===id);if(m)fillMerchant(m);$('searchResults').innerHTML='';document.querySelector('[data-tab="inspect"]').click()}
+function searchMerchants(q,container){
+ q=q.trim().toLowerCase();
+ const matched=merchants.filter(m=>!q||[m.name,m.tin,m.kebele].some(v=>(v||'').toLowerCase().includes(q)));
+ const serial=new Map();let n=1;
+ // Keep classified merchants at the beginning of the numbering, then unclassified, then records with no classification entered.
+ const ordered=[...matched.filter(m=>m.classification==='classified'),...matched.filter(m=>m.classification==='unclassified'),...matched.filter(m=>!m.classification)];
+ ordered.forEach(m=>serial.set(m.id,n++));
+ const card=m=>`<div class="merchant"><strong>${serial.get(m.id)}. ${esc(m.name||'ስም የለም')}</strong><div class="muted">TIN: ${esc(m.tin||'—')}<br>የንግድ ዘርፍ: ${esc(m.sector||'—')}<br>አድራሻ: ${esc(m.kebele||'—')}<br>ምደባ: ${m.classification==='classified'?'የተፈረጀ':m.classification==='unclassified'?'ያልተፈረጀ':'ምደባ አልተመዘገበም'}</div><div class="rowbtn"><button class="btn secondary" onclick="chooseMerchant('${m.id}')">ምረጥ / ቁጥጥር ጀምር</button><button class="btn danger" onclick="deleteMerchant('${m.id}')">🗑 ነጋዴውን ድሊት አድርግ</button></div></div>`;
+ const group=(title,list)=>`<h3 style="margin:14px 0 6px">${title} (${list.length})</h3>${list.length?list.map(card).join(''):'<div class="empty">በዚህ ክፍል የተመዘገበ ነጋዴ የለም።</div>'}`;
+ const classified=ordered.filter(m=>m.classification==='classified');
+ const unclassified=ordered.filter(m=>m.classification==='unclassified');
+ const unmarked=ordered.filter(m=>!m.classification);
+ const inspectedIds=new Set(inspections.map(r=>r.merchantId).filter(Boolean).map(String));
+ const inspectedNames=new Set(inspections.map(r=>(r.name||'').trim().toLowerCase()));
+ const notWorked=ordered.filter(m=>!inspectedIds.has(String(m.id))&&!inspectedNames.has((m.name||'').trim().toLowerCase()));
+ container.innerHTML=ordered.length?group('የተፈረጁ ነጋዴዎች',classified)+group('ያልተፈረጁ ነጋዴዎች',unclassified)+group('ምደባቸው ያልተመዘገበ ነጋዴዎች',unmarked)+group('ገና ቁጥጥር ያልተደረገባቸው ነጋዴዎች',notWorked):'<div class="empty">መረጃ አልተገኘም። አዲስ ነጋዴ መመዝገብ ይችላሉ።</div>';
+}
+function toggleOtherInspector(){const sel=$('inspectorName'),other=$('otherInspectorName');if(!sel||!other)return;const showOther=sel.value==='ሌላ';other.hidden=!showOther;other.style.display=showOther?'block':'none';other.style.visibility=showOther?'visible':'hidden';if(showOther){other.disabled=false;other.setAttribute('aria-label','የሌላውን ባለሙያ ስም ያስገቡ')}else{other.value='';other.disabled=true}}
+function selectedInspectorName(){const v=$('inspectorName').value;return v==='ሌላ'?$('otherInspectorName').value.trim():v}
+function saveInspection(){let name=$('name').value.trim();if(!name){alert('እባክዎ የነጋዴውን ስም ያስገቡ።');return}let q=$('quarter').value;if(!q){alert('እባክዎ የሩብ ዓመቱን ይምረጡ።');return}let inspectorName=selectedInspectorName();if(!$('inspectorName').value){alert('እባክዎ የተቆጣጣሪውን ስም ይምረጡ።');return}if($('inspectorName').value==='ሌላ'&&!inspectorName){alert('እባክዎ የሌላውን ባለሙያ ስም ያስገቡ።');return}let answers=criteria.map((_,i)=>{let e=document.querySelector(`input[name="c${i}"]:checked`);return e?e.value:''});if(answers.some(a=>!a)){alert('እባክዎ ስድስቱንም መስፈርቶች ይምረጡ።');return}let date=$('visitDate').value||new Date().toISOString().slice(0,10);let existingId=$('merchantId').value;let match=merchants.find(x=>existingId?x.id===existingId:((x.name||'').trim().toLowerCase()===name.toLowerCase()&&(!$('tin').value.trim()||x.tin===$('tin').value.trim())));let merchantKey=existingId||(match&&match.id);let duplicate=inspections.find(r=>String(r.quarter||'')===String(q)&&ethiopianYear(r.date)===ethiopianYear(date)&&( (merchantKey&&r.merchantId&&String(r.merchantId)===String(merchantKey)) || (String(r.name||'').trim().toLowerCase()===name.toLowerCase() && ( (!$('tin').value.trim() && !(r.tin||'').trim()) || ($('tin').value.trim() && String(r.tin||'').trim()===$('tin').value.trim()) || (!(r.tin||'').trim() && ! $('tin').value.trim()) )) ));if(duplicate){alert('⚠️ ማስጠንቀቂያ! ይህ ነጋዴ በ'+ethiopianYear(date)+' ዓ.ም. በ'+q+'ኛ ሩብ ዓመት ቀድሞ ተቆጣጥሯል።\n\nውጤቱ አልተቀመጠም። ድጋሚ ላለመመዝገብ በ“ሪፖርት” ትር የተቀመጠውን ይመልከቱ።');return false}let m=saveMerchant();if(!m)return;let rec={id:uid(),merchantId:m.id,name:m.name,tin:m.tin,date,quarter:q,answers,notes:$('notes').value.trim(),inspectorName:inspectorName,renewal:m.renewal||'',created:new Date().toISOString()};inspections.unshift(rec);persist();document.querySelectorAll('#checklist input').forEach(e=>e.checked=false);$('notes').value='';$('inspectorName').value='';$('otherInspectorName').value='';toggleOtherInspector();renderAll();alert('የቁጥጥር ውጤት ተቀምጧል።');}
+function renderMerchants(){const c=$('merchantCount');if(c)c.textContent=merchants.length;searchMerchants($('merchantFilter').value,$('merchantList'))}function renderMerchantQuarterOverview(){
+ const ys=availableEthiopianYears();
+ const sel=$('merchantQuarterYear'); if(!sel)return; const old=sel.value||'all';
+ sel.innerHTML='<option value="all">ሁሉም ዓመታት</option>'+ys.map(y=>'<option value="'+esc(y)+'">'+esc(y)+'</option>').join('');
+ sel.value=ys.includes(old)||old==='all'?old:'all';
+ const year=sel.value; const qn={'1':'1ኛ ሩብ ዓመት','2':'2ኛ ሩብ ዓመት','3':'3ኛ ሩብ ዓመት','4':'4ኛ ሩብ ዓመት'};
+ // Keep the original registered-merchant order; show only merchants with saved inspections.
+ const inspected=merchants.map(m=>({m})).map(item=>({...item,own:inspections.filter(r=>((r.merchantId&&String(r.merchantId)===String(item.m.id))||(!r.merchantId&&((r.tin&&r.tin===item.m.tin)||String(r.name||'').trim()===String(item.m.name||'').trim())))&&(year==='all'||inspectionMatchesReportYear(r,year)))})).filter(item=>item.own.length>0).map((item,index)=>({...item,serial:index+1}));
+ $('merchantQuarterOverview').innerHTML=inspected.map(({m,serial,own})=>{
+  const quarters=['1','2','3','4'].map(q=>{const list=own.filter(r=>String(r.quarter||'')===q).sort((a,b)=>String(a.date||'').localeCompare(String(b.date||'')));if(!list.length)return '';return '<div style="padding:5px 0"><b>'+qn[q]+'፦</b> '+list.map(r=>esc(ethiopianDate(r.date))+' ('+((r.answers||[]).filter(a=>a==='yes').length)+'/6 አሟልቷል; '+((r.answers||[]).filter(a=>a==='no').length)+'/6 አላሟላም; ተቆጣጣሪ፦ '+esc(r.inspectorName||'—')+')').join('<br>')+'</div>';}).filter(Boolean).join('');
+  return '<div class="merchant"><strong>'+serial+'. '+esc(m.name||'ስም የለም')+'</strong><div class="muted">TIN፦ '+esc(m.tin||'—')+'<br>የንግድ ዘርፍ፦ '+esc(m.sector||'—')+'<br>አድራሻ፦ '+esc(m.kebele||'—')+'</div><div style="margin-top:8px">'+quarters+'</div></div>';
+ }).join('')||'<div class="empty">በተመረጠው ዓመት የተቆጣጠረ ነጋዴ አልተገኘም።</div>';
+}
+function reportMerchantKey(r){
+ const linked=merchants.find(m=>(r.merchantId&&String(m.id)===String(r.merchantId))||(!r.merchantId&&r.tin&&String(m.tin||'').trim()===String(r.tin||'').trim())||(!r.merchantId&&!r.tin&&String(m.name||'').trim().toLowerCase()===String(r.name||'').trim().toLowerCase()));
+ if(linked)return 'merchant:'+String(linked.id);
+ const tin=String(r.tin||'').trim();
+ const name=String(r.name||'').trim().toLowerCase();
+ return tin?'tin:'+tin:(name?'name:'+name:'record:'+String(r.id||Math.random()));
+}
+function inspectionMatchesReportYear(record, year){
+ const selected=String(year);
+ const etYear=String(ethiopianYear(record && record.date));
+ if(etYear===selected)return true;
+ // Compatibility with older records whose date was stored with the Ethiopian year as the leading year.
+ const raw=String(record && record.date || '').trim();
+ const leading=raw.match(/^(\d{4})[-\/]/);
+ return !!(leading && leading[1]===selected);
+}
+function getSummaryReportData(year){
+ const yearInspections=inspections.filter(i=>inspectionMatchesReportYear(i,year));
+ const visitedKeys=new Set(yearInspections.map(reportMerchantKey));
+ const problemInspections=yearInspections.filter(i=>(i.answers||[]).includes('no'));
+ const problemMerchantKeys=new Set(problemInspections.map(reportMerchantKey));
+ const deficiencyItems=yearInspections.reduce((n,i)=>n+(i.answers||[]).filter(a=>a==='no').length,0);
+ return {year,yearInspections,visitedKeys,problemInspections,problemMerchantKeys,deficiencyItems,totalMerchants:merchants.length,visitedMerchants:visitedKeys.size,notVisited:Math.max(0,merchants.length-visitedKeys.size)};
+}
+function summaryReportLines(d){
+ return ['የጋዞ ወረዳ የንግድ ቁጥጥር — ማጠቃለያ ሪፖርት','የሪፖርት ቀን፦ '+ethiopianDate(new Date()),'የሪፖርት ዓመት፦ '+d.year+' ዓ.ም.','','1. ጠቅላላ የተመዘገቡ ነጋዴዎች፦ '+d.totalMerchants,'2. በር-ከበር የተጎበኙ የተለያዩ ነጋዴዎች፦ '+d.visitedMerchants,'3. ጉድለት የተገኘባቸው የተለያዩ ነጋዴዎች፦ '+d.problemMerchantKeys.size,'','ማስታወሻ፦ ቁጥሮቹ ከአፑ ውስጥ በተመረጠው ዓመት በተቀመጡ የቁጥጥር ውጤቶች ይሰላሉ። የቁጥጥር መዝገብ ካልተቀመጠ በር-ከበር የተጎበኙ ቁጥር 0 ይሆናል።'];
+}
+function renderReports(){
+ const reportYear=String($('reportYear')?.value||ethiopianYear(new Date()));
+ const d=getSummaryReportData(reportYear), yearInspections=d.yearInspections.slice().sort((a,b)=>String(a.date||'').localeCompare(String(b.date||'')));
+ $('totalM').textContent=d.totalMerchants;$('totalI').textContent=d.visitedMerchants;$('failedI').textContent=d.problemMerchantKeys.size;
+ const il=$('reportInspectionLabel');if(il)il.textContent='በር-ከበር የተጎበኙ ነጋዴዎች';
+ const summary=$('summaryReportPreview');if(summary)summary.innerHTML=summaryReportLines(d).slice(4,11).map(line=>'<div style="padding:5px 0;border-bottom:1px solid var(--line)">'+esc(line)+'</div>').join('');
+ const box=$('reportPreview'); if(box){
+  if(!yearInspections.length){box.innerHTML='<div class="empty">በ'+esc(reportYear)+' ዓ.ም. የተቀመጠ ቁጥጥር አልተገኘም። ቁጥጥር ካልተመዘገበ ቁጥሩ 0 ይሆናል።</div>';}
+  else box.innerHTML=yearInspections.map((r,i)=>'<div class="merchant"><strong>'+(i+1)+'. '+esc(r.name||'ስም የለም')+'</strong><div class="muted">ቀን፦ '+esc(ethiopianDate(r.date))+'<br>ሩብ ዓመት፦ '+esc(({1:'1ኛ',2:'2ኛ',3:'3ኛ',4:'4ኛ'})[String(r.quarter)]||'—')+' ሩብ ዓመት<br>TIN፦ '+esc(r.tin||'—')+'<br>ያሟላቸው፦ '+((r.answers||[]).filter(a=>a==='yes').length)+'/6; ያላሟላቸው፦ '+((r.answers||[]).filter(a=>a==='no').length)+'/6<br>ተቆጣጣሪ፦ '+esc(r.inspectorName||'—')+'</div></div>').join('');
+ }
+}
+function exportSummaryReport(){const year=String($('reportYear')?.value||ethiopianYear(new Date()));const d=getSummaryReportData(year);download('Gazo_'+year+'_Summary_Report.txt',summaryReportLines(d).join('\r\n'),'text/plain;charset=utf-8')}
+
+function exportQuarterReport(){
+ const q=String($('reportQuarter').value||'1');
+ const qNames={'1':'1ኛ ሩብ ዓመት','2':'2ኛ ሩብ ዓመት','3':'3ኛ ሩብ ዓመት','4':'4ኛ ሩብ ዓመት'};
+ const serialOf=r=>{const ix=merchants.findIndex(m=>(r.merchantId&&String(m.id)===String(r.merchantId))||(!r.merchantId&&((r.tin&&r.tin===m.tin)||String(r.name||'').trim()===String(m.name||'').trim())));return ix<0?Number.MAX_SAFE_INTEGER:ix+1};
+ const year=String($('reportYear').value||ethiopianYear(new Date()));
+ const selected=inspections.filter(r=>String(r.quarter||'')===q&&inspectionMatchesReportYear(r,year)).slice().sort((a,b)=>serialOf(a)-serialOf(b)||String(a.date||'').localeCompare(String(b.date||'')));
+ const uniqueMerchants=new Set(selected.map(r=>r.merchantId||((r.tin||'')+'|'+(r.name||''))));
+ const problemCount=selected.filter(r=>(r.answers||[]).includes('no')).length;
+ const out=['የጋዞ ወረዳ የንግድ ቁጥጥር ሪፖርት','የሪፖርት ቀን፦ '+ethiopianDate(new Date()),'የሪፖርት ዓመት፦ '+year+' ዓ.ም.','የተመረጠው ጊዜ፦ '+qNames[q],'','========================================',qNames[q]+' የአፈጻጸም ማጠቃለያ','========================================','የተጎበኙ የተለያዩ ነጋዴዎች፦ '+uniqueMerchants.size,'ጠቅላላ ቁጥጥሮች፦ '+selected.length,'ችግር የተገኘባቸው ቁጥጥሮች፦ '+problemCount,'','========================================',qNames[q]+' ዝርዝር','========================================','ጠቅላላ የተመዘገቡ ቁጥጥሮች፦ '+selected.length,''];
+ if(!selected.length){out.push('በዚህ ሩብ ዓመት የተመዘገበ ቁጥጥር የለም።');}
+ selected.forEach((r,i)=>{
+  const yes=(r.answers||[]).filter(a=>a==='yes').length, no=(r.answers||[]).filter(a=>a==='no').length;
+  out.push((i+1)+'. የነጋዴ ስም፦ '+(r.name||'—'),qNames[q]+'፦','ቀን፦ '+(r.date?ethiopianDate(r.date):'—'),'የተገኘ ውጤት ('+yes+'/6 አሟልቷል; '+no+'/6 አላሟላም; ተቆጣጣሪ፦ '+(r.inspectorName||'—')+')','TIN፦ '+(r.tin||'—'),'የንግድ ዘርፍ፦ '+((merchants.find(m=>m.id===r.merchantId)||{}).sector||'—'),'አድራሻ፦ '+((merchants.find(m=>m.id===r.merchantId)||{}).kebele||'—'),'የፈቃድ እድሳት፦ '+renewalAm(r.renewal));
+  criteria.forEach((c,j)=>out.push('   '+(j+1)+'. '+c+' — '+((r.answers||[])[j]==='yes'?'አሟልቷል':(r.answers||[])[j]==='no'?'አላሟላም':'አልተመረጠም')));
+  out.push('ማስታወሻ/የተወሰደ እርምጃ፦ '+(r.notes||'—'),'');
+ });
+ out.push('','========================================','ሪፖርቱ ከአፑ ውስጥ በተመዘገቡ የቁጥጥር መረጃዎች ተዘጋጅቷል።');
+ download('Gazo_'+year+'_'+q+'_Quarter_Inspection_Report.txt',out.join('\r\n'),'text/plain;charset=utf-8');
+}
+function exportAnnualMerchantQuarterReport(){
+ const year=String($('reportYear').value||ethiopianYear(new Date()));
+ const annualInspections=inspections.filter(r=>inspectionMatchesReportYear(r,year));
+ const qNames={'1':'1ኛ ሩብ ዓመት','2':'2ኛ ሩብ ዓመት','3':'3ኛ ሩብ ዓመት','4':'4ኛ ሩብ ዓመት'};
+ const out=['የጋዞ ወረዳ የነጋዴዎች የ4ቱ ሩብ ዓመት ቁጥጥር ሪፖርት','የሪፖርት ቀን፦ '+ethiopianDate(new Date()),'የሪፖርት ዓመት፦ '+year+' ዓ.ም.','ጠቅላላ ነጋዴዎች፦ '+merchants.length,'በዚህ ዓመት የተመዘገቡ ቁጥጥሮች፦ '+annualInspections.length,'','ማብራሪያ፦ በእያንዳንዱ ነጋዴ ስር የ1ኛ፣ 2ኛ፣ 3ኛ እና 4ኛ ሩብ ዓመት ሁኔታ ተዘርዝሯል።','========================================','የሩብ ዓመት ማጠቃለያ','========================================'];
+ ['1','2','3','4'].forEach(q=>{const arr=annualInspections.filter(r=>String(r.quarter||'')===q);const ids=new Set(arr.map(r=>r.merchantId||((r.tin||'')+'|'+(r.name||''))));out.push(qNames[q]+': የተጎበኙ ነጋዴዎች '+ids.size+' / '+merchants.length+'፤ ጠቅላላ ጉብኝት '+arr.length+'፤ ያልተሟላ መስፈርት ያለባቸው ቁጥጥሮች '+arr.filter(r=>(r.answers||[]).includes('no')).length);});
+ out.push('','========================================','የነጋዴዎች ዝርዝር በተራ ቁጥር','========================================');
+ const sorted=merchants.map(m=>({m})).map(item=>({...item,own:annualInspections.filter(r=>(r.merchantId&&String(r.merchantId)===String(item.m.id))||(!r.merchantId&&((r.tin&&r.tin===item.m.tin)||String(r.name||'').trim()===String(item.m.name||'').trim()))).sort((a,b)=>String(a.date||'').localeCompare(String(b.date||'')))})).filter(item=>item.own.length>0).map((item,index)=>({...item,serial:index+1}));
+ sorted.forEach(({m,serial,own})=>{
+  const covered=new Set(own.map(r=>String(r.quarter||'')));
+  out.push('',serial+'. የነጋዴ ስም፦ '+(m.name||'—'),'   TIN፦ '+(m.tin||'—'),'   የንግድ ዘርፍ፦ '+(m.sector||'—'),'   አድራሻ፦ '+(m.kebele||'—'),'   የተጎበኘባቸው ሩብ ዓመታት፦ '+covered.size+'/4');
+  ['1','2','3','4'].forEach(q=>{
+   const list=own.filter(r=>String(r.quarter||'')===q);
+   if(!list.length){out.push('   '+qNames[q]+'፦ አልተቆጣጠረም');return;}
+   out.push('   '+qNames[q]+'፦ '+list.length+' ጉብኝት');
+   list.forEach((r,j)=>{const yes=(r.answers||[]).filter(a=>a==='yes').length,no=(r.answers||[]).filter(a=>a==='no').length;out.push('      '+(j+1)+') ቀን፦ '+(r.date?ethiopianDate(r.date):'—')+'፤ ያሟላቸው፦ '+yes+'/6፤ ያላሟላቸው፦ '+no+'/6፤ ተቆጣጣሪ፦ '+(r.inspectorName||'—'));if(r.notes)out.push('         ማስታወሻ/እርምጃ፦ '+r.notes);});
+  });
+ });
+ out.push('','========================================','ማስታወሻ፦ ይህ ሪፖርት ቁጥጥር የተደረገላቸውን ነጋዴዎች ብቻ በተራ ቁጥር ያሳያል።');
+ download('Gazo_Merchant_'+year+'_Annual_Quarterly_Followup.txt',out.join('\r\n'),'text/plain;charset=utf-8');
+}
+function availableEthiopianYears(){
+ const current=Number(ethiopianYear(new Date()))||2019;
+ const stored=inspections.map(r=>Number(ethiopianYear(r.date))).filter(y=>Number.isFinite(y)&&y>0);
+ // Offer future years too, without limiting the app to 2019 or the current year.
+ const latest=Math.max(current,...stored,2019)+20;
+ const years=[];
+ for(let y=latest;y>=2019;y--) years.push(String(y));
+ // Preserve any historical data older than 2019 if present in a backup.
+ stored.filter(y=>y<2019).sort((a,b)=>b-a).forEach(y=>years.push(String(y)));
+ return [...new Set(years)];
+}
+function deleteInspection(id){if(confirm('ይህን የቁጥጥር መዝገብ ለመሰረዝ እርግጠኛ ነዎት?')){inspections=inspections.filter(i=>i.id!==id);persist();renderAll()}}
+function populateReportYears(){
+ const sel=$('reportYear');if(!sel)return;
+ const current=String(Number(ethiopianYear(new Date()))||2019), ys=availableEthiopianYears(), old=sel.value;
+ sel.innerHTML=ys.map(y=>'<option value="'+esc(y)+'">'+esc(y)+' ዓ.ም.</option>').join('');
+ sel.value=ys.includes(old)?old:(ys.includes(current)?current:ys[0]);
+ const ms=$('merchantQuarterYear'); if(ms){const oldM=ms.value||'all';ms.innerHTML='<option value="all">ሁሉም ዓመታት</option>'+ys.map(y=>'<option value="'+esc(y)+'">'+esc(y)+' ዓ.ም.</option>').join('');ms.value=(oldM==='all'||ys.includes(oldM))?oldM:'all';}
+}
+function renderAll(){populateReportYears();renderMerchants();renderReports();renderMerchantQuarterOverview()}
+async function saveBackupFile(name,content,type){const blob=new Blob(['\ufeff'+content],{type});if(window.showSaveFilePicker){try{const handle=await window.showSaveFilePicker({suggestedName:name,types:[{description:'Gazo backup file',accept:{[type.split(';')[0]]:[name.endsWith('.json')?'.json':'.txt']}}]});const writable=await handle.createWritable();await writable.write(blob);await writable.close();alert('ምትኬው በመረጡት ፋይል ተቀምጧል። ቀጣይ ጊዜ ያንኑ ፋይል መርጠው በአዲሱ መተካት ይችላሉ።');return}catch(e){if(e&&e.name==='AbortError')return;}}download(name,content,type);alert('ምትኬው ወርዷል። ይህ አሳሽ በቀጥታ የቀድሞ ፋይልን መተካት ካልደገፈ፣ ተመሳሳይ ስም ያለው ተጨማሪ ፋይል ሊፈጠር ይችላል። የአፑ መረጃ ግን በአሳሹ ውስጥ በራሱ ይቀመጣል።')}function download(name,content,type){let blob=new Blob(['\ufeff'+content],{type}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function renewalAm(v){return v==='renewed'?'ታድሷል':v==='not_renewed'?'አልታደሰም':v==='new'?'አዲስ':'አልተመረጠም'}
+function exportReadableBackup(filename){
+ let out=['የጋዞ ወረዳ የንግድ ቁጥጥር — የሚነበብ ምትኬ','የተዘጋጀበት ቀን፦ '+ethiopianDate(new Date()),'','==============================','1. የነጋዴዎች ዝርዝር','=============================='];
+ if(!merchants.length) out.push('ምንም ነጋዴ አልተመዘገበም።');
+ merchants.forEach((m,i)=>{out.push('',(i+1)+'. የነጋዴ ስም፦ '+(m.name||'—'),'   TIN፦ '+(m.tin||'—'),'   የንግድ ዘርፍ፦ '+(m.sector||'—'),'   ስልክ፦ '+(m.phone||'—'),'   ቀበሌ፦ '+(m.kebele||'—'),'   የነጋዴ ምደባ፦ '+(m.classification==='classified'?'የተፈረጀ':m.classification==='unclassified'?'ያልተፈረጀ':'ምደባ አልተመዘገበም'),'   የፈቃድ እድሳት፦ '+renewalAm(m.renewal));});
+ out.push('','==============================','2. የቁጥጥር ውጤቶች','==============================');
+ if(!inspections.length) out.push('ምንም ቁጥጥር አልተመዘገበም።');
+ inspections.forEach((r,i)=>{out.push('',(i+1)+'. የነጋዴ ስም፦ '+(r.name||'—'),'   ቀን፦ '+(r.date?ethiopianDate(r.date):'—'),'   ሩብ ዓመት፦ '+(r.quarter?(r.quarter+'ኛ ሩብ ዓመት'):'—'),'   TIN፦ '+(r.tin||'—'),'   የፈቃድ ሁኔታ፦ '+renewalAm(r.renewal),'   የተቆጣጣሪ ስም፦ '+(r.inspectorName||'—'),'   የ6ቱ መስፈርቶች፦');criteria.forEach((c,j)=>out.push('      '+(j+1)+'. '+c+' — '+(r.answers&&r.answers[j]==='yes'?'አሟልቷል':r.answers&&r.answers[j]==='no'?'አላሟላም':'አልተመረጠም')));out.push('   የተሟሉ መስፈርቶች፦ '+((r.answers||[]).filter(a=>a==='yes').length)+'/6','   ማስታወሻ/እርምጃ፦ '+(r.notes||'—'));});
+ out.push('','==============================','የምትኬ ማስታወሻ፦ ይህ TXT ፋይል በቁጥር ተደርድሮ ለማንበብና ለሪፖርት ማሳያ ነው። ወደ አፑ መልሶ ለመጫን “JSON ምትኬ አውጣ” ይጠቀሙ።');
+ saveBackupFile(filename||'Gazo_Merchant_Mibike.txt',out.join('\r\n'),'text/plain;charset=utf-8');
+}
+function csvCell(x){return '"'+String(x??'').replace(/"/g,'""')+'"'}function exportCSV(kind){let rows;if(kind==='m'){rows=[['ተራ ቁጥር','ስም','TIN','የንግድ ዘርፍ','ስልክ','ቀበሌ','የነጋዴ ምደባ','የፈቃድ እድሳት ሁኔታ'],...merchants.map((m,i)=>[i+1,m.name,m.tin,m.sector,m.phone,m.kebele,m.classification==='classified'?'የተፈረጀ':m.classification==='unclassified'?'ያልተፈረጀ':'',m.renewal==='renewed'?'ታድሷል':m.renewal==='not_renewed'?'አልታደሰም':m.renewal==='new'?'አዲስ':''])];download('Gazo_Merchants.csv',rows.map(r=>r.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8')}else{rows=[['ቀን','ሩብ ዓመት','የነጋዴ ስም','TIN',...criteria,'የተሟሉ ብዛት','ያልተሟሉ ብዛት','የፈቃድ ሁኔታ','የተቆጣጣሪ ስም','ማስታወሻ'],...inspections.map(i=>[i.date?ethiopianDate(i.date):'',i.quarter?i.quarter+'ኛ ሩብ ዓመት':'',i.name,i.tin,...i.answers.map(a=>a==='yes'?'አሟልቷል':'አላሟላም'),i.answers.filter(a=>a==='yes').length,i.answers.filter(a=>a==='no').length,i.renewal==='renewed'?'ታድሷል':i.renewal==='not_renewed'?'አልታደሰም':i.renewal==='new'?'አዲስ':'',i.inspectorName||'',i.notes])];download('Gazo_Inspection_Report.csv',rows.map(r=>r.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8')}}
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));['inspect','merchants','reports'].forEach(t=>$(t).classList.toggle('hidden',t!==b.dataset.tab));renderAll()}));$('visitDate').value=new Date().toISOString().slice(0,10);renderChecks();$('searchBtn').onclick=()=>searchMerchants($('findMerchant').value,$('searchResults'));$('findMerchant').addEventListener('keydown',e=>{if(e.key==='Enter')$('searchBtn').click()});$('saveMerchant').onclick=()=>{if(saveMerchant())alert('የነጋዴ መረጃ በዚህ ስልክ/አሳሽ ውስጥ ተቀምጧል። ለማየት “ነጋዴዎች” ትርን ይጫኑ።')};$('newMerchant').onclick=()=>{clearMerchant();document.querySelectorAll('#checklist input').forEach(e=>e.checked=false);$('notes').value=''};$('saveInspection').onclick=saveInspection;$('inspectorName').addEventListener('change',toggleOtherInspector);toggleOtherInspector();$('filterBtn').onclick=renderMerchants;$('merchantFilter').addEventListener('input',renderMerchants);$('backup').onclick=()=>exportReadableBackup('Gazo_Merchant_Mibike.txt');$('jsonBackup').onclick=()=>saveBackupFile('Gazo_Backup.json',JSON.stringify({version:1,createdAt:new Date().toISOString(),merchants,inspections},null,2),'application/json');$('merchantQuarterYear').addEventListener('change',renderMerchantQuarterOverview);$('reportYear').addEventListener('change',renderReports);$('summaryReportBtn').onclick=exportSummaryReport;$('quarterReportBtn').onclick=exportQuarterReport;$('annualMerchantReportBtn').onclick=exportAnnualMerchantQuarterReport;$('restoreBtn').onclick=()=>{let f=$('restoreFile').files[0];if(!f){alert('እባክዎ JSON ምትኬ ፋይል ይምረጡ።');return}if(!confirm('የአሁኑ መረጃ በምትኬው መተካት ይችላል። መቀጠል ይፈልጋሉ?'))return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(!Array.isArray(d.merchants)||!Array.isArray(d.inspections))throw 0;merchants=d.merchants;inspections=d.inspections;persist();renderAll();alert('ምትኬ ተመልሷል።')}catch(e){alert('ፋይሉ ትክክለኛ የGazo JSON ምትኬ አይደለም።')}};r.readAsText(f)};renderAll();
+</script></body></html>
